@@ -1,0 +1,196 @@
+# SEED CORPUS - paraphrased placeholders. Replace/extend with official CBIC and DGFT documents; verify every text and policy value.
+
+@@ id=GRI_1 type=gri chapter=0 source=seed-GRI
+GRI 1: The titles of Sections, Chapters and sub-Chapters are provided for ease of reference only. For legal purposes, classification shall be determined according to the terms of the headings and any relative Section or Chapter Notes and, provided such headings or Notes do not otherwise require, according to the following provisions.
+
+@@ id=GRI_2 type=gri chapter=0 source=seed-GRI
+GRI 2: (a) Any reference to an article includes that article incomplete or unfinished, provided it has the essential character of the complete article. (b) Any reference to a material or substance includes mixtures or combinations of that material with other materials; classification of goods consisting of more than one material shall be according to the principles of GRI 3.
+
+@@ id=GRI_3a type=gri chapter=0 source=seed-GRI
+GRI 3(a): When goods are prima facie classifiable under two or more headings, the heading which provides the most specific description shall be preferred to headings providing a more general description.
+
+@@ id=GRI_3b type=gri chapter=0 source=seed-GRI
+GRI 3(b): Composite goods made up of different materials or components which cannot be classified by reference to GRI 3(a) shall be classified as if they consisted of the material or component which gives them their essential character.
+
+@@ id=GRI_3c type=gri chapter=0 source=seed-GRI
+GRI 3(c): When goods cannot be classified by reference to GRI 3(a) or 3(b), they shall be classified under the heading which occurs last in numerical order among those which equally merit consideration.
+
+@@ id=GRI_4 type=gri chapter=0 source=seed-GRI
+GRI 4: Goods which cannot be classified in accordance with the above rules shall be classified under the heading appropriate to the goods to which they are most akin.
+
+@@ id=GRI_6 type=gri chapter=0 source=seed-GRI
+GRI 6: For legal purposes, the classification of goods in the subheadings of a heading shall be determined according to the terms of those subheadings and any related Subheading Notes.
+
+@@ id=NOTE_S15_1 type=note chapter=73 source=seed-SXV
+Section XV Note 1: This Section does not cover articles of Chapter 96 (for example, brushes, buttons, slide fasteners, sanitary towels and napkins for babies). It also does not cover articles of Chapter 82 or 83 where those chapters specifically name them.
+
+@@ id=NOTE_C73_1 type=note chapter=73 source=seed-C73
+Chapter 73 Note 1: In this Chapter the expression cast iron applies to products obtained by casting; the expression iron or steel includes alloy steel and stainless steel.
+
+@@ id=NOTE_C73_2 type=note chapter=73 source=seed-C73
+Chapter 73 Note 2: Heading 7326 covers only articles of iron or steel that are not included in the preceding headings of this Chapter or in other Chapters of the Nomenclature.
+
+@@ id=NOTE_C96_1 type=note chapter=96 source=seed-C96
+Chapter 96 Note 1: This Chapter does not cover articles of heading 6601, 6602 or 6603 (umbrellas, walking-sticks, whips) or articles of Chapter 71 where precious metal is the essential material.
+
+@@ id=H7308 type=heading chapter=73 source=seed-C73
+7308 - Structures (excluding prefabricated buildings of heading 9406) and parts of structures (for example, bridges, towers, lattice masts, doors, windows, shutters, balustrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel.
+
+@@ id=H7310 type=heading chapter=73 source=seed-C73
+7310 - Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment.
+
+@@ id=H7312 type=heading chapter=73 source=seed-C73
+7312 - Stranded wire, ropes, cables, plaited bands, slings and the like, of iron or steel, not electrically insulated.
+
+@@ id=H7315 type=heading chapter=73 source=seed-C73
+7315 - Chain and parts thereof, of iron or steel.
+
+@@ id=H7317 type=heading chapter=73 source=seed-C73
+7317 - Nails, tacks, drawing pins, corrugated nails, staples (other than those of heading 8305) and similar articles, of iron or steel, whether or not with heads of other material, but excluding such articles with heads of copper.
+
+@@ id=H7318 type=heading chapter=73 source=seed-C73
+7318 - Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel.
+
+@@ id=H7319 type=heading chapter=73 source=seed-C73
+7319 - Sewing needles, knitting needles, bodkins, crochet hooks, embroidery stilettos and similar articles, for use in the hand, of iron or steel; safety pins and other pins of iron or steel, not elsewhere specified or included.
+
+@@ id=H7320 type=heading chapter=73 source=seed-C73
+7320 - Springs and leaves for springs, of iron or steel.
+
+@@ id=H7321 type=heading chapter=73 source=seed-C73
+7321 - Stoves, ranges, grates, cookers (including those with subsidiary boilers for central heating), barbecues, braziers, gas rings, plate warmers and similar non-electric domestic appliances, and parts thereof, of iron or steel.
+
+@@ id=H7323 type=heading chapter=73 source=seed-C73
+7323 - Table, kitchen or other household articles and parts thereof, of iron or steel; iron or steel wool; pot scourers and scouring or polishing pads, gloves and the like, of iron or steel.
+
+@@ id=H7324 type=heading chapter=73 source=seed-C73
+7324 - Sanitary ware and parts thereof, of iron or steel (for example, bath tubs, sinks and washbasins).
+
+@@ id=H7326 type=heading chapter=73 source=seed-C73
+7326 - Other articles of iron or steel.
+
+@@ id=H9603 type=heading chapter=96 source=seed-C96
+9603 - Brooms, brushes (including brushes constituting parts of machines, appliances or vehicles), hand-operated mechanical floor sweepers, not motorised, mops and feather dusters; prepared knots and tufts for broom or brush making; paint pads and rollers; squeegees (other than roller squeegees).
+
+@@ id=H9604 type=heading chapter=96 source=seed-C96
+9604 - Hand sieves and hand riddles.
+
+@@ id=H9605 type=heading chapter=96 source=seed-C96
+9605 - Travel sets for personal toilet, sewing or shoe or clothes cleaning.
+
+@@ id=H9606 type=heading chapter=96 source=seed-C96
+9606 - Buttons, press-fasteners, snap-fasteners and press-studs, button moulds and other parts of these articles; button blanks.
+
+@@ id=H9607 type=heading chapter=96 source=seed-C96
+9607 - Slide fasteners and parts thereof.
+
+@@ id=H9608 type=heading chapter=96 source=seed-C96
+9608 - Ball point pens; felt tipped and other porous-tipped pens and markers; fountain pens, stylograph pens and other pens; duplicating stylos; propelling or sliding pencils; pen-holders, pencil-holders and similar holders; parts (including caps and clips) of the foregoing articles, other than those of heading 9609.
+
+@@ id=H9609 type=heading chapter=96 source=seed-C96
+9609 - Pencils (other than pencils of heading 9608), crayons, pencil leads, pastels, drawing charcoals, writing or drawing chalks and tailors' chalks.
+
+@@ id=H9613 type=heading chapter=96 source=seed-C96
+9613 - Cigarette lighters and other lighters, whether or not mechanical or electrical, and parts thereof other than flints and wicks.
+
+@@ id=H9614 type=heading chapter=96 source=seed-C96
+9614 - Smoking pipes (including pipe bowls) and cigar or cigarette holders, and parts thereof.
+
+@@ id=H9615 type=heading chapter=96 source=seed-C96
+9615 - Combs, hair-slides and the like; hairpins, curling pins, curling grips, hair-curlers and the like, other than those of heading 8516, and parts thereof.
+
+@@ id=H9616 type=heading chapter=96 source=seed-C96
+9616 - Scent sprays and similar toilet sprays, and mounts and heads therefor; powder-puffs and pads for the application of cosmetics or toilet preparations.
+
+@@ id=H9617 type=heading chapter=96 source=seed-C96
+9617 - Vacuum flasks and other vacuum vessels, complete with cases; parts thereof other than glass inners.
+
+@@ id=H9618 type=heading chapter=96 source=seed-C96
+9618 - Tailors' dummies and other lay figures; automata and other animated displays used for shop window dressing.
+
+@@ id=H9619 type=heading chapter=96 source=seed-C96
+9619 - Sanitary towels (pads) and tampons, napkins and napkin liners for babies and similar articles, of any material.
+
+@@ id=H9620 type=heading chapter=96 source=seed-C96
+9620 - Monopods, bipods, tripods and similar articles.
+
+@@ id=POL_7308 type=policy chapter=73 source=seed-DGFT
+Export policy for 7308: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7310 type=policy chapter=73 source=seed-DGFT
+Export policy for 7310: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7312 type=policy chapter=73 source=seed-DGFT
+Export policy for 7312: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7315 type=policy chapter=73 source=seed-DGFT
+Export policy for 7315: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7317 type=policy chapter=73 source=seed-DGFT
+Export policy for 7317: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7318 type=policy chapter=73 source=seed-DGFT
+Export policy for 7318: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7319 type=policy chapter=73 source=seed-DGFT
+Export policy for 7319: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7320 type=policy chapter=73 source=seed-DGFT
+Export policy for 7320: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7321 type=policy chapter=73 source=seed-DGFT
+Export policy for 7321: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7323 type=policy chapter=73 source=seed-DGFT
+Export policy for 7323: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7324 type=policy chapter=73 source=seed-DGFT
+Export policy for 7324: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_7326 type=policy chapter=73 source=seed-DGFT
+Export policy for 7326: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9603 type=policy chapter=96 source=seed-DGFT
+Export policy for 9603: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9604 type=policy chapter=96 source=seed-DGFT
+Export policy for 9604: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9605 type=policy chapter=96 source=seed-DGFT
+Export policy for 9605: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9606 type=policy chapter=96 source=seed-DGFT
+Export policy for 9606: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9607 type=policy chapter=96 source=seed-DGFT
+Export policy for 9607: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9608 type=policy chapter=96 source=seed-DGFT
+Export policy for 9608: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9609 type=policy chapter=96 source=seed-DGFT
+Export policy for 9609: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9613 type=policy chapter=96 source=seed-DGFT
+Export policy for 9613: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9614 type=policy chapter=96 source=seed-DGFT
+Export policy for 9614: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9615 type=policy chapter=96 source=seed-DGFT
+Export policy for 9615: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9616 type=policy chapter=96 source=seed-DGFT
+Export policy for 9616: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9617 type=policy chapter=96 source=seed-DGFT
+Export policy for 9617: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9618 type=policy chapter=96 source=seed-DGFT
+Export policy for 9618: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9619 type=policy chapter=96 source=seed-DGFT
+Export policy for 9619: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]
+
+@@ id=POL_9620 type=policy chapter=96 source=seed-DGFT
+Export policy for 9620: Free. [UNVERIFIED PLACEHOLDER - confirm against the DGFT ITC(HS) export schedule before relying on it]

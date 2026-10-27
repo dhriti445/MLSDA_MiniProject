@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><title>Export classification check</title>
+<style>body{font:15px system-ui;max-width:760px;margin:2rem auto;padding:0 1rem}input,select,textarea{width:100%;padding:6px;margin:3px 0}pre{background:#f4f4f4;padding:8px;overflow:auto}</style>
+<h2>Export classification check <small>(proposal only; a licensed broker decides)</small></h2>
+<textarea id="d" rows="3">Stainless steel vacuum flask with a moulded plastic outer body.</textarea>
+<input id="c" placeholder="client id" value="web-client">
+<input id="dest" value="US"><input id="q" type="number" value="100"><select id="u"><option>pcs</option><option>kg</option><option>set</option><option>litre</option></select>
+<input id="v" type="number" value="50000">
+<button onclick="go()">Classify</button> <span id="s"></span>
+<div id="out"></div><div id="fb"></div>
+<script>
+let rid;
+async function go(){
+ out.innerHTML="";s.textContent="submitting...";
+ const r=await fetch("/v1/classify",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({client_id:c.value,product_description:d.value,destination_country:dest.value,quantity:+q.value,unit:u.value,declared_value_inr:+v.value})});
+ const j=await r.json(); if(r.status!=202){out.innerHTML="<pre>"+JSON.stringify(j,null,2)+"</pre>";s.textContent="rejected";return}
+ rid=j.run_id;
+ for(let i=0;i<120;i++){const g=await (await fetch(j.status_url)).json(); s.textContent=g.status;
+  if(g.status=="completed"||g.status=="failed"){show(g);return} await new Promise(r=>setTimeout(r,500))}
+}
+function show(g){const x=g.result; if(!x){out.innerHTML="<pre>"+JSON.stringify(g,null,2)+"</pre>";return}
+ let h=`<h3>Route: ${x.route}</h3><p>${x.basis}</p>`;
+ if(x.proposal){h+=`<p><b>Proposed heading ${x.proposal.heading}</b> (${x.proposal.rule})</p><p>${x.rationale}</p><h4>Citations</h4><ul>`+
+  x.proposal.basis.map(b=>`<li><code>${b.chunk_id}</code>: ${b.quote}</li>`).join("")+"</ul>";
+  h+=x.proposal.excluded_alternatives.map(e=>`<p>Not ${e.heading}: ${e.reason}<br><code>${e.citation.chunk_id}</code>: ${e.citation.quote}</p>`).join("");
+  if(x.proposal.export_policy)h+=`<p>${x.proposal.export_policy.text}</p>`}
+ if(x.questions)h+="<p>Questions: "+x.questions.join(" ")+"</p>";
+ h+=`<p>Escalation path: ${x.escalation_path.next}</p><p><small>run ${x.run_id} | prompt ${x.prompt_version} | steps ${x.steps} | tool calls ${x.tool_calls} | degraded ${x.degraded}</small></p>`;
+ out.innerHTML=h; fb.innerHTML='<button onclick="f(true)">Helpful</button> <button onclick="f(false)">Not helpful</button>'}
+async function f(ok){const reason=prompt("Reason?")||"";const r=await fetch("/v1/feedback",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({run_id:rid,satisfactory:ok,reason})});fb.textContent=JSON.stringify(await r.json())}
+</script>

@@ -1,0 +1,10 @@
+
+@@ id=GRI_1 type=rule chapter=00 source=CBIC_TARIFF
+The titles of Sections, Chapters and sub-chapters are provided for ease of reference only; for legal purposes, classification shall be determined according to the terms of the headings and any relative Section or Chapter Notes and, provided such headings or Notes do not otherwise require, according to the following provisions. Source: Customs Tariff Act, 1975, General Rules for the Interpretation of Import Tariff, PDF page 30 of 41 in custom_tariff.pdf. Verify the edition before relying on it.
+@@ id=NOTE_S15_1 type=note chapter=00 source=CUSTOMS_TARIFF
+Section XV, Note 1(m): This Section does not cover hand sieves, buttons, pens, pencil-holders, pen nibs, monopods, bipods, tripods and similar articles or other articles of Chapter 96 (miscellaneous manufactured articles).
+Source: Customs Tariff Act, 1975, First Schedule, Section XV, Note 1(m).
+@@ id=H9617 type=heading chapter=96 source=CBIC_TARIFF
+9617 - Vacuum flasks and other vacuum vessels, complete; parts thereof other than glass inners. Source: Customs Tariff, Chapter 96, heading 9617. Verify the edition before relying on it.
+@@ id=POL_9617 type=policy chapter=96 source=DGFT_EXPORT_POLICY
+DGFT export policy status for HS code 9617: VERIFY against the applicable current ITC (HS) Schedule II entry and any conditions or notifications. Do not treat this placeholder as verified policy evidence.

@@ -1,0 +1,20 @@
+{"id": "E01", "description": "Stainless steel vacuum flask with a moulded plastic outer body.", "expected_route": "clear-for-filing", "expected_heading": "9617", "supporting_chunks": ["H9617", "GRI_1", "NOTE_S15_1"]}
+{"id": "E02", "description": "Steel kitchen sieve for household use", "expected_route": "clear-for-filing", "expected_heading": "9604", "supporting_chunks": ["H9604", "GRI_1", "NOTE_S15_1"]}
+{"id": "E03", "description": "Steel nails of 50 mm length", "expected_route": "clear-for-filing", "expected_heading": "7317", "supporting_chunks": ["H7317", "GRI_1"]}
+{"id": "E04", "description": "Steel bolts and nuts for machinery", "expected_route": "clear-for-filing", "expected_heading": "7318", "supporting_chunks": ["H7318", "GRI_1"]}
+{"id": "E05", "description": "Steel sewing needles for hand use", "expected_route": "clear-for-filing", "expected_heading": "7319", "supporting_chunks": ["H7319", "GRI_1"]}
+{"id": "E06", "description": "Plastic hair comb", "expected_route": "clear-for-filing", "expected_heading": "9615", "supporting_chunks": ["H9615", "GRI_1"]}
+{"id": "E07", "description": "Ballpoint pen with plastic barrel", "expected_route": "clear-for-filing", "expected_heading": "9608", "supporting_chunks": ["H9608", "GRI_1"]}
+{"id": "E08", "description": "Brass buttons for coats", "expected_route": "clear-for-filing", "expected_heading": "9606", "supporting_chunks": ["H9606", "GRI_1"]}
+{"id": "E09", "description": "Steel slide fastener for garments", "expected_route": "clear-for-filing", "expected_heading": "9607", "supporting_chunks": ["H9607", "GRI_1", "NOTE_S15_1"]}
+{"id": "E10", "description": "Stainless steel household water bucket", "expected_route": "clear-for-filing", "expected_heading": "7323", "supporting_chunks": ["H7323", "GRI_1"]}
+{"id": "E11", "description": "Cast iron cooking stove for domestic use", "expected_route": "clear-for-filing", "expected_heading": "7321", "supporting_chunks": ["H7321", "GRI_1"]}
+{"id": "E12", "description": "Steel bath tub", "expected_route": "clear-for-filing", "expected_heading": "7324", "supporting_chunks": ["H7324", "GRI_1"]}
+{"id": "E13", "description": "Steel coil spring for machinery", "expected_route": "clear-for-filing", "expected_heading": "7320", "supporting_chunks": ["H7320", "GRI_1"]}
+{"id": "E14", "description": "Pocket gas lighter with plastic body", "expected_route": "clear-for-filing", "expected_heading": "9613", "supporting_chunks": ["H9613", "GRI_1"]}
+{"id": "E15", "description": "Steel link chain for lifting", "expected_route": "clear-for-filing", "expected_heading": "7315", "supporting_chunks": ["H7315", "GRI_1"]}
+{"id": "E16", "description": "Cotton t-shirt for men, knitted", "expected_route": "specialist-classification-review", "expected_heading": null, "supporting_chunks": []}
+{"id": "E17", "description": "Laptop computer with 16 GB memory", "expected_route": "specialist-classification-review", "expected_heading": null, "supporting_chunks": []}
+{"id": "E18", "description": "Steel thing", "expected_route": "seek-product-clarification", "expected_heading": null, "supporting_chunks": []}
+{"id": "E19", "description": "Some product made of plastic", "expected_route": "seek-product-clarification", "expected_heading": null, "supporting_chunks": []}
+{"id": "E20", "description": "Hand tool set of steel spanners", "expected_route": "specialist-classification-review", "expected_heading": null, "supporting_chunks": []}
