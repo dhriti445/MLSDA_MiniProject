@@ -1,12 +1,189 @@
-<!doctype html><meta charset="utf-8"><title>Export classification check</title>
-<style>body{font:15px system-ui;max-width:760px;margin:2rem auto;padding:0 1rem}input,select,textarea{width:100%;padding:6px;margin:3px 0}pre{background:#f4f4f4;padding:8px;overflow:auto}</style>
-<h2>Export classification check <small>(proposal only; a licensed broker decides)</small></h2>
-<textarea id="d" rows="3">Stainless steel vacuum flask with a moulded plastic outer body.</textarea>
-<input id="c" placeholder="client id" value="web-client">
-<input id="dest" value="US"><input id="q" type="number" value="100"><select id="u"><option>pcs</option><option>kg</option><option>set</option><option>litre</option></select>
-<input id="v" type="number" value="50000">
-<button onclick="go()">Classify</button> <span id="s"></span>
-<div id="out"></div><div id="fb"></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export Classification Check</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080b14;
+      --panel: rgba(18, 24, 39, .82);
+      --panel-soft: rgba(25, 33, 53, .72);
+      --line: rgba(139, 158, 197, .2);
+      --text: #edf3ff;
+      --muted: #9aa8c3;
+      --accent: #73e8ff;
+      --accent-strong: #8d7aff;
+      --success: #74f0bf;
+      --shadow: 0 0 36px rgba(89, 106, 255, .16);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 48px 20px;
+      color: var(--text);
+      font: 15px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(84, 105, 255, .2), transparent 34rem),
+        radial-gradient(circle at 90% 18%, rgba(54, 220, 244, .13), transparent 30rem),
+        var(--bg);
+    }
+
+    .shell { max-width: 900px; margin: 0 auto; }
+    .hero { margin-bottom: 28px; }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, h4 { line-height: 1.2; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -.05em; }
+    .subtitle { max-width: 680px; margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+    .notice {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 18px;
+      padding: 7px 12px;
+      border: 1px solid rgba(115, 232, 255, .24);
+      border-radius: 999px;
+      color: #c6f7ff;
+      background: rgba(115, 232, 255, .08);
+      font-size: 12px;
+    }
+    .notice::before { content: "●"; color: var(--success); font-size: 10px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.04);
+      backdrop-filter: blur(18px);
+    }
+    .form-card { padding: clamp(20px, 4vw, 34px); }
+    .section-heading { margin: 0 0 6px; font-size: 20px; }
+    .section-copy { margin: 0 0 24px; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field-wide { grid-column: 1 / -1; }
+    label { color: #cbd6eb; font-size: 13px; font-weight: 700; }
+    textarea, input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 13px;
+      outline: 0;
+      color: var(--text);
+      background: rgba(5, 9, 20, .64);
+      font: inherit;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+    textarea { min-height: 104px; resize: vertical; }
+    textarea:focus, input:focus, select:focus {
+      border-color: var(--accent);
+      background: rgba(8, 15, 30, .9);
+      box-shadow: 0 0 0 3px rgba(115, 232, 255, .1), 0 0 22px rgba(115, 232, 255, .1);
+    }
+    .actions { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+    button {
+      border: 0;
+      border-radius: 11px;
+      padding: 11px 18px;
+      color: #07101f;
+      background: linear-gradient(135deg, var(--accent), #9dceff);
+      box-shadow: 0 0 22px rgba(115, 232, 255, .22);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      transition: transform .2s, box-shadow .2s, filter .2s;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(115, 232, 255, .4); filter: brightness(1.08); }
+    button:active { transform: translateY(0); }
+    #s { color: var(--muted); font-size: 13px; }
+    .results { margin-top: 24px; }
+    .result-card {
+      margin-top: 16px;
+      padding: 24px;
+      border: 1px solid rgba(141, 122, 255, .28);
+      border-radius: 18px;
+      background: var(--panel-soft);
+      box-shadow: 0 0 28px rgba(141, 122, 255, .12);
+    }
+    .result-card h3 { margin-top: 0; color: var(--accent); }
+    .result-card h4 { margin-bottom: 8px; color: #d3caff; }
+    .result-card p { color: #c0cbe0; }
+    code, pre {
+      border-radius: 8px;
+      color: #b6f3ff;
+      background: rgba(2, 6, 16, .7);
+    }
+    code { padding: 2px 6px; }
+    pre { padding: 14px; overflow: auto; white-space: pre-wrap; }
+    ul { padding-left: 22px; color: #c0cbe0; }
+    #fb { display: flex; gap: 10px; margin-top: 16px; }
+    #fb button { padding: 8px 13px; color: var(--text); background: rgba(115, 232, 255, .1); box-shadow: none; }
+    #fb button:hover { background: rgba(115, 232, 255, .2); }
+    @media (max-width: 620px) {
+      body { padding: 28px 14px; }
+      .grid { grid-template-columns: 1fr; }
+      .field-wide { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">ECS · Trade compliance intelligence</p>
+      <h1>Export classification check</h1>
+      <p class="subtitle">Turn a product description into an evidence-backed HS classification proposal with transparent routing and citations.</p>
+      <span class="notice">Proposal only — a licensed broker makes the final decision</span>
+    </header>
+
+    <section class="card form-card">
+      <h2 class="section-heading">Start a classification review</h2>
+      <p class="section-copy">Provide the shipment details below to begin an asynchronous analysis.</p>
+      <div class="grid">
+        <div class="field field-wide">
+          <label for="d">Product description</label>
+          <textarea id="d" rows="3">Stainless steel vacuum flask with a moulded plastic outer body.</textarea>
+        </div>
+        <div class="field">
+          <label for="c">Client ID</label>
+          <input id="c" placeholder="client id" value="web-client">
+        </div>
+        <div class="field">
+          <label for="dest">Destination country</label>
+          <input id="dest" value="US">
+        </div>
+        <div class="field">
+          <label for="q">Quantity</label>
+          <input id="q" type="number" value="100">
+        </div>
+        <div class="field">
+          <label for="u">Unit</label>
+          <select id="u"><option>pcs</option><option>kg</option><option>set</option><option>litre</option></select>
+        </div>
+        <div class="field field-wide">
+          <label for="v">Declared value (INR)</label>
+          <input id="v" type="number" value="50000">
+        </div>
+      </div>
+      <div class="actions">
+        <button onclick="go()">Run classification</button>
+        <span id="s">Ready when you are.</span>
+      </div>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <div id="out"></div>
+      <div id="fb"></div>
+    </section>
+  </main>
 <script>
 let rid;
 async function go(){
@@ -18,13 +195,15 @@ async function go(){
   if(g.status=="completed"||g.status=="failed"){show(g);return} await new Promise(r=>setTimeout(r,500))}
 }
 function show(g){const x=g.result; if(!x){out.innerHTML="<pre>"+JSON.stringify(g,null,2)+"</pre>";return}
- let h=`<h3>Route: ${x.route}</h3><p>${x.basis}</p>`;
+ let h=`<article class="result-card"><h3>Route: ${x.route}</h3><p>${x.basis}</p>`;
  if(x.proposal){h+=`<p><b>Proposed heading ${x.proposal.heading}</b> (${x.proposal.rule})</p><p>${x.rationale}</p><h4>Citations</h4><ul>`+
   x.proposal.basis.map(b=>`<li><code>${b.chunk_id}</code>: ${b.quote}</li>`).join("")+"</ul>";
   h+=x.proposal.excluded_alternatives.map(e=>`<p>Not ${e.heading}: ${e.reason}<br><code>${e.citation.chunk_id}</code>: ${e.citation.quote}</p>`).join("");
   if(x.proposal.export_policy)h+=`<p>${x.proposal.export_policy.text}</p>`}
  if(x.questions)h+="<p>Questions: "+x.questions.join(" ")+"</p>";
- h+=`<p>Escalation path: ${x.escalation_path.next}</p><p><small>run ${x.run_id} | prompt ${x.prompt_version} | steps ${x.steps} | tool calls ${x.tool_calls} | degraded ${x.degraded}</small></p>`;
+ h+=`<p>Escalation path: ${x.escalation_path.next}</p><p><small>run ${x.run_id} | prompt ${x.prompt_version} | steps ${x.steps} | tool calls ${x.tool_calls} | degraded ${x.degraded}</small></p></article>`;
  out.innerHTML=h; fb.innerHTML='<button onclick="f(true)">Helpful</button> <button onclick="f(false)">Not helpful</button>'}
 async function f(ok){const reason=prompt("Reason?")||"";const r=await fetch("/v1/feedback",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({run_id:rid,satisfactory:ok,reason})});fb.textContent=JSON.stringify(await r.json())}
 </script>
+</body>
+</html>
